@@ -1,0 +1,55 @@
+# a grc module for colourising the maven outputs
+
+regexp=^\[WARNING\]
+colours=bold yellow
+count=once
+-
+regexp=^\[ERROR\]
+colours=bold red
+count=more
+-
+# Passed
+regexp=.* SUCCESS \[.*
+colours=green
+count=once
+-
+regexp=.* BUILD SUCCESS
+colours=green
+count=once
+-
+# Failed
+regexp=(BUILD)? (failed|FAILURE|FAILED|FAIL)
+colours=bold red
+count=once
+-
+regexp=Failures: [0-9]+
+colours=bold red
+count=once
+-
+regexp=Errors: [0-9]+
+colours=bold red
+count=once
+-
+regexp=Skipped: [0-9]+
+colours=bold yellow
+count=once
+-
+# this is probably a pathname
+regexp=~?([a-z_][a-z0-9_]{0,30})?/([^\0\n\ !$`&*()+]|\\\ )+\b/?
+colours=bold yellow
+count=more
+-
+#this is for coloring the "expected" and "but was" information of a failed java test
+regexp=(expected:<(.*?)>)(.*but was:<(.*?)>)
+colours=bold cyan, bold green, bold yellow, bold red
+count=more
+-
+# this is for capturing the file and line of an error when running java tests
+regexp=^\s.*(\((.*)\))
+colours=unchanged, unchanged, bold
+count=more
+-
+#color maven plugin lines
+regexp=^\s*\[INFO\].*maven-compiler-plugin:.*:.*\s
+colours=bold 
+count=more

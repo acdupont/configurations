@@ -1,0 +1,21 @@
+
+#color the word that was searched for
+#regexp=.*
+#colours=bold yellow
+#count=more
+#-
+#regexp=python
+#trying to look at history and grep the term being searched for, this config should be changed to conf.apt-cache-search
+#command=history | tail -2
+#command=echo $0
+#colours=bold black
+#count=more
+
+#highlight words before ' - '
+regexp=(^.*\s-\s)
+#command=ls /bin | grep "^h"
+#command=cat ~/.lastcommand
+#command=preexec()
+command=egrep -o "\w*$" ~/.lastcommand > /dev/null
+colours=bold black
+count=more
