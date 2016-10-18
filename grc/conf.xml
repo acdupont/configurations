@@ -1,7 +1,7 @@
 
 #hightlight tags red and text between tags on same line white
 regexp=<(.*?)>(.*)<(.*?)>|<(.*?)>
-colours=red, red, white, red
+colours=red, red, black, red
 count=more
 
 
