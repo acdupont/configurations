@@ -1,9 +1,12 @@
 {
-	"auto_match_enabled": false,
 	"draw_white_space": "all",
+	"auto_match_enabled": false,
+	"detect_indentation": true,
 	"trim_automatic_white_space": false,
+	"tab_completion": false,
+	"word_wrap": false
 	"ignored_packages":
 	[
 		"Vintage"
-	]
+	],
 }
