@@ -1,9 +1,14 @@
-
 ################################################################################
 # git prompt
 source ~/.git-prompt.sh
-export GIT_PS1_SHOWDIRTYSTATE=1
+export GIT_PS1_SHOWDIRTYSTATE=
+export GIT_PS1_SHOWSTASHSTATE=
+export GIT_PS1_SHOWUNTRACKEDFILES=
+export GIT_PS1_COMPRESSSPARSESTATE=
+export GIT_PS1_SHOWUPSTREAM=
+export GIT_PS1_SHOWCONFLICTSTATE=
 export GIT_PS1_SHOWCOLORHINTS=true
+
 magenta="\[\e[35m\]"
 red="\[\e[31m\]"
 endcolor="\[\e[0m\]"
